@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INVO Academy JS Starter with Vite</title>
+    <link rel="stylesheet" href="src/global-styles/style.scss" />
+  </head>
+
+  <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
+
+  <body>
+    <div id="home-page">
+      <div id="home-page__header">
+        <h1>Pricing</h1>
+        <p>
+          Choose the right pricing for you and <br />
+          get started with your project.
+        </p>
+      </div>
+      
+      <div id="home-page__container">
+        
+        <div class="home-page-card">
+          <h2 class="home-page-card__title">Basic</h3>
+          <div class="home-page-card__price">
+            <div class="home-page-card__price--dollar">$</div> 
+            <div class="home-page-card__price--value">399</div> 
+            <div class="home-page-card__price--year">/year</div>
+          </div>
+          <div class="home-page-card__about">For organizing every cornet of your work & life.</div>
+          <ul class="home-page-card__list">
+            <li><i class="fa-solid fa-circle-check"></i> Collaborative workspace</li>
+            <li><i class="fa-solid fa-circle-check"></i> 7 day page history</li>
+          </ul>
+          <button class="home-page-card__button">Get started</button>
+        </div>
+
+        <div class="home-page-card home-page-card--dark">
+          <h2 class="home-page-card__title">Professional</h3>
+          <div class="home-page-card__price">
+            <div class="home-page-card__price--dollar">$</div> 
+            <div class="home-page-card__price--value">499</div> 
+            <div class="home-page-card__price--year">/year</div>
+          </div>
+          <div class="home-page-card__about">A place for small groups to plan & get organized.</div>
+          <ul class="home-page-card__list">
+            <li><i class="fa-solid fa-circle-check"></i> All features in Basic</li>
+            <li><i class="fa-solid fa-circle-check"></i> Unlimited block for teams</li>
+            <li><i class="fa-solid fa-circle-check"></i> 30 day page history</li>
+          </ul>
+          <button class="home-page-card__button home-page-card__button--dark">Get started</button>
+        </div>
+
+        <div class="home-page-card">
+          <h2 class="home-page-card__title">Enterprise</h3>
+          <div class="home-page-card__price">
+            <div class="home-page-card__price--dollar">$</div> 
+            <div class="home-page-card__price--value">599</div> 
+            <div class="home-page-card__price--year">/year</div>
+          </div>
+          <div class="home-page-card__about">For companies using our software to connect several teams & tools.</div>
+          <ul class="home-page-card__list">
+            <li><i class="fa-solid fa-circle-check"></i> SAML SSO</li>
+            <li><i class="fa-solid fa-circle-check"></i> Private teamspaces</li>
+            <li><i class="fa-solid fa-circle-check"></i> Advanced page analytics</li>
+            <li><i class="fa-solid fa-circle-check"></i> 90 day page history</li>
+          </ul>
+          <button class="home-page-card__button">Get started</button>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="module" src="/src/global-scripts/main.js"></script>
+    <script
+      type="module"
+      src="/src/pages/home-page/scripts/home-page.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7697815b37.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

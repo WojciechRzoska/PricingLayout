@@ -1,0 +1,192 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+
+@media (min-width: 20em) {
+}
+@media (min-width: 47em) {
+}
+@media (min-width: 91em) {
+}
+
+@mixin font($size, $weight, $spacing) {
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+}
+
+#home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    text-align: center;
+    margin-top: 72px;
+    margin-bottom: 48px;
+    color: var(--color-grey);
+
+    @include font(
+      var(--font-regular),
+      var(--font-regular),
+      var(--letter-spacing-1)
+    );
+
+    h1 {
+      margin-bottom: 16px;
+      @include font(
+        var(--font-large),
+        var(--font-semibold),
+        var(--letter-spacing-3)
+      );
+      color: var(--color-dark-blue);
+    }
+  }
+
+  &__container {
+    display: flex;
+
+    gap: 16px;
+
+    @media (min-width: 1rem) {
+      flex-direction: column;
+    }
+    @media (min-width: 91rem) {
+      flex-direction: row;
+    }
+  }
+}
+
+.home-page-card {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--color-light-purple);
+  background-color: var(--color-white);
+  border-radius: 24px;
+  padding: 32px;
+
+  max-width: 327px;
+  height: 414px;
+  flex-direction: column;
+
+  &--dark {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+  }
+
+  &__title {
+    @include font(
+      var(--font-medium),
+      var(--font-semibold),
+      var(--letter-spacing-3)
+    );
+  }
+
+  &__price {
+    display: flex;
+    margin-top: 16px;
+
+    &--dollar {
+      margin-top: 5px;
+      @include font(
+        var(--font-regular),
+        var(--font-semibold),
+        var(--letter-spacing-1)
+      );
+    }
+
+    &--value {
+      @include font(
+        var(--font-large),
+        var(--font-semibold),
+        var(--letter-spacing-1)
+      );
+    }
+
+    &--year {
+      margin-top: auto;
+
+      @include font(
+        var(--font-regular),
+        var(--font-regular),
+        var(--letter-spacing-1)
+      );
+      color: var(--color-grey);
+    }
+  }
+
+  &__about {
+    @include font(
+      var(--font-regular),
+      var(--font-regular),
+      var(--letter-spacing-1)
+    );
+    color: var(--color-grey);
+    margin-top: 24px;
+    max-width: 244px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+
+    li + li {
+      margin-top: 8px;
+    }
+    i {
+      background-color: transparent;
+      color: var(--color-orange);
+      margin-right: 12px;
+    }
+  }
+
+  &__button {
+    max-width: 263px;
+    height: 48px;
+
+    background: var(--color-dark-blue);
+    color: var(--color-white);
+    border-radius: 16px;
+    border: none;
+
+    margin-top: auto;
+
+    &:hover {
+      border: 2px solid var(--color-violet);
+      color: var(--color-violet);
+      background-color: transparent;
+    }
+    &--dark {
+      background-color: var(--color-violet);
+    }
+  }
+
+  @media (min-width: 47rem) and (max-width: 91rem) {
+    height: 278px;
+    max-width: 687px;
+    width: 687px;
+    display: grid;
+    grid-template: 50px 50px 1fr/ 1fr 1fr 143px 120px;
+    &__title {
+      align-self: center;
+    }
+    &__price {
+      grid-column: 4/5;
+      margin: 0;
+    }
+    &__button {
+      grid-column: 3/5;
+      grid-row: 3/3;
+    }
+    &__about {
+      margin: 0;
+      grid-column: 1/3;
+    }
+    &__list {
+      grid-column: 1/3;
+      grid-row: 3/3;
+    }
+  }
+}
